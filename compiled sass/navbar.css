@@ -1,0 +1,68 @@
+.navbar {
+  padding: 1em 10%;
+  background: white;
+  z-index: 2;
+}
+
+.navbar .navbar-collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navbar .navbar-collapse .nav-item {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.navbar .navbar-collapse .nav-item .nav-link {
+  margin: auto 0.5em;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: getColor(dark-grayish-violet);
+}
+
+.navbar .navbar-collapse .nav-item .nav-link:hover {
+  color: black;
+}
+
+.navbar .navbar-collapse .nav-item:last-child .nav-link {
+  border: 2px solid rgba(0, 0, 0, 0.692);
+  color: rgba(0, 0, 0, 0.692);
+  margin-left: 5px;
+  padding: 8px 1.9em;
+}
+
+.navbar .navbar-collapse .nav-item:last-child .nav-link:hover {
+  border-color: black;
+  background: black;
+  color: white;
+}
+
+.navbar .collapsing, .navbar .show {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #221d31cb !important;
+  z-index: 1;
+}
+
+.navbar .collapsing .nav-link, .navbar .show .nav-link {
+  color: white !important;
+}
+
+.navbar .collapsing .nav-link:hover, .navbar .show .nav-link:hover {
+  color: getColor(dark-grayish-violet) !important;
+}
+
+.navbar .collapsing:last-child .nav-link, .navbar .show:last-child .nav-link {
+  border-color: white !important;
+  background: transparent !important;
+}
+
+.navbar .collapsing:last-child .nav-link:hover, .navbar .show:last-child .nav-link:hover {
+  border-color: getColor(dark-grayish-violet);
+}
+/*# sourceMappingURL=navbar.css.map */

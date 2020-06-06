@@ -1,0 +1,63 @@
+//just manipulate bootstrap classes
+.navbar {
+    padding: 1em 10%;
+    background: white;
+    z-index: 2; // #intro section's bg-right is set to z-index: 1
+
+    .navbar-collapse {
+        justify-content: flex-end;
+
+        .nav-item {
+            align-self: center;
+
+            .nav-link {
+                margin: auto 0.5em;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                color: getColor(dark-grayish-violet);
+
+                &:hover {
+                    color: black;
+                }
+            }
+            // view plans
+            &:last-child .nav-link {
+                border: 2px solid rgba(0, 0, 0, 0.692);
+                color: rgba(0, 0, 0, 0.692);
+                margin-left: 5px;
+                padding: 8px 1.9em;
+
+                &:hover {
+                    border-color: black;
+                    background: black;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    //change default position when expanded
+    .collapsing, .show {
+        position: absolute; top: 100%; right: 0;
+        background-color: #221d31cb !important;
+        z-index: 1;
+
+        .nav-link {
+        color: white !important;
+            &:hover {
+                color: getColor(dark-grayish-violet) !important;
+            }
+        }
+        // view plans
+        &:last-child .nav-link {
+            border-color: white !important;
+            background: transparent !important;
+            &:hover {
+                border-color: getColor(dark-grayish-violet);
+            }
+        }
+    }
+
+
+}

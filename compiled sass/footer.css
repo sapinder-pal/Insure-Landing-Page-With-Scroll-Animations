@@ -1,0 +1,102 @@
+#footer {
+  padding: 5% 10%;
+  background: getColor(light-gray-bg) url("../images/bg-pattern-footer-desktop.svg") left top no-repeat;
+}
+
+#footer .footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 3vh;
+  margin-bottom: 5vh;
+}
+
+#footer .footer-top > img {
+  height: 20px;
+}
+
+#footer .footer-top .social-accounts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1vw;
+}
+
+#footer .footer-top .social-accounts a {
+  color: getColor(dark-grayish-violet);
+  font-size: 1.5em;
+}
+
+#footer .footer-top .social-accounts a:hover {
+  color: black;
+  -webkit-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+  text-shadow: 0 10px 5px rgba(105, 105, 105, 0.281);
+}
+
+#footer hr {
+  border: 0;
+  height: 1px;
+  background: getColor(dark-grayish-violet);
+  margin-bottom: 5vh;
+}
+
+#footer .references {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2% 10%;
+}
+
+#footer .references div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+#footer .references h6 {
+  font-size: 1em;
+  margin-bottom: 2vh;
+  color: getColor(dark-grayish-violet);
+}
+
+#footer .references a {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: getColor(dark-violet);
+}
+
+#footer .references a:hover {
+  text-decoration: underline;
+}
+
+#footer .attribution {
+  display: block;
+  margin-top: 3vh;
+  font-size: 11px;
+  text-align: center;
+}
+
+#footer .attribution a {
+  color: #a33e70;
+}
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,108 @@
+#intro-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1%;
+  background: getColor(dark-violet);
+  position: relative;
+}
+
+#intro-section img[class*="intro-bg"] {
+  position: absolute;
+}
+
+#intro-section .text-wrapper, #intro-section .img-wrapper {
+  position: relative;
+}
+
+#intro-section .text-wrapper {
+  -ms-flex-preferred-size: 38%;
+      flex-basis: 38%;
+  top: 100px;
+  list-style: none;
+}
+
+#intro-section .text-wrapper::before {
+  content: "";
+  height: 1px;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: getColor(light-gray);
+}
+
+#intro-section .text-wrapper.slide-pseudo::before {
+  width: 25%;
+}
+
+#intro-section .text-wrapper h1 {
+  margin: 50px auto;
+  padding-bottom: 10px;
+  color: white;
+  position: relative;
+}
+
+#intro-section .text-wrapper h1::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: getColor(dark-violet);
+}
+
+#intro-section .text-wrapper h1.slide-pseudo::before {
+  width: 0;
+}
+
+#intro-section .text-wrapper p {
+  margin-top: 25px;
+}
+
+#intro-section .text-wrapper p, #intro-section .text-wrapper .custom-navlink {
+  opacity: 0;
+}
+
+#intro-section .img-wrapper {
+  bottom: -100px;
+  opacity: 0;
+}
+
+#intro-section .intro-bg-left {
+  bottom: -34%;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+#intro-section .intro-bg-right {
+  top: -75px;
+  right: 0;
+  z-index: 1;
+  -webkit-transform: rotateZ(100deg) translate(0, -600px);
+          transform: rotateZ(100deg) translate(0, -600px);
+}
+
+#intro-section .intro-bg-left-mobile, #intro-section .intro-bg-right-mobile {
+  display: none;
+  height: 0;
+}
+
+#intro-section .intro-bg-right-mobile {
+  right: 0;
+  bottom: -200px;
+}
+
+#intro-section .intro-bg-left-mobile {
+  left: 0;
+  top: 451px;
+}
+/*# sourceMappingURL=intro-section.css.map */

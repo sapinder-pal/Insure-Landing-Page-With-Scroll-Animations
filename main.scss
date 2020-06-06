@@ -1,0 +1,76 @@
+$colors: (dark-violet: #2d2640,
+    dark-grayish-violet: #837d87,
+    light-gray: #ffffffe3,
+    light-gray-bg: #fafafa);
+
+@function getColor($color) {
+    @return map-get($colors, $color)
+};
+
+//common styles
+body {
+    font-family: 'Karla', sans-serif;
+    
+    h1, h2, h3 {
+        font-family: 'DM Serif Display', serif;
+    }
+    h1, h2 {
+        font-size: 4em;
+        line-height: 0.9;
+    }
+    h3 {
+        font-size: 1.7em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    #intro-section p, .custom-navlink {
+        color: getColor(light-gray);
+    }
+
+    .custom-navlink,
+    .nav-link,
+    .references {
+        text-transform: uppercase;
+    }
+
+    .custom-navlink {
+        display: inline-block;
+        padding: 8px 2em !important;
+        font-size: 0.9em;
+        font-weight: bold;
+        border: 2px solid getColor(light-gray);
+        margin-top: 25px;
+        &:hover {
+            color: getColor(dark-violet);
+            background: white;
+        }
+    }
+}
+
+// NAVBAR
+@import "sass/navbar.scss";
+
+// INTRO
+@import "sass/intro-section.scss";
+
+// FEATURES-SECTION
+@import "sass/features-section.scss";
+
+// FIND MORE SECTION
+@import "sass/find-more.scss";
+
+// FOOTER
+@import "sass/footer.scss";
+
+// RESPONSIVE LAYOUT
+@import "sass/media-queries.scss";
+
+// TRANSITIONS
+@import "sass/transitions.scss";
