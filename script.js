@@ -1,6 +1,6 @@
 let toggler = $(".navbar-toggler");
-let hamburgerIcon = $(".icon-hamburger");
-let closeIcon = $(".icon-close");
+let hamburgerIcon = $(".fa-bars");
+let closeIcon = $(".fa-times-circle");
 let navigationBar = $("#navigation");
 
 let expanded = 0;
@@ -8,13 +8,13 @@ let expanded = 0;
 toggler.click(()=>	{
 
 	if(!expanded){
-		hamburgerIcon.css("display","none");
-		closeIcon.css("display","initial");
+		hamburgerIcon.addClass("inactive");
+		closeIcon.removeClass("inactive");
 		expanded = 1;
 	}
 	else {
-		hamburgerIcon.css("display","initial");
-		closeIcon.css("display","none");
+		hamburgerIcon.removeClass("inactive");
+		closeIcon.addClass("inactive");
 		expanded = 0;
 	}
 })
@@ -28,7 +28,7 @@ let windowWidth = $(window).innerWidth();
 
 //desktop animations
 if(windowWidth >675){
-	
+
 	//#intro h1 appear
 	$("#intro-section h1").addClass("slide-pseudo");
 	//opacity

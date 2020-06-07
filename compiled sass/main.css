@@ -49,7 +49,6 @@ body .custom-navlink:hover {
 
 .navbar {
   padding: 1em 10%;
-  background: whitesmoke;
   z-index: 2;
 }
 
@@ -115,6 +114,20 @@ body .custom-navlink:hover {
   border-color: #837d87;
 }
 
+.navbar button {
+  text-align: center;
+  font-size: 24px;
+  color: #837d87;
+}
+
+.navbar button :hover {
+  color: black;
+}
+
+.navbar button .fa-bars.inactive::before, .navbar button .fa-times-circle.inactive::before {
+  content: "";
+}
+
 #intro-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,7 +148,7 @@ body .custom-navlink:hover {
   position: absolute;
 }
 
-#intro-section .text-wrapper, #intro-section .img-wrapper {
+#intro-section .text-wrapper, #intro-section .img-wrapper, #intro-section h1 {
   position: relative;
 }
 
@@ -164,7 +177,6 @@ body .custom-navlink:hover {
   margin: 50px auto;
   padding-bottom: 10px;
   color: white;
-  position: relative;
 }
 
 #intro-section .text-wrapper h1::before {

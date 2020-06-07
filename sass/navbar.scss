@@ -1,7 +1,6 @@
 //just manipulate bootstrap classes
 .navbar {
     padding: 1em 10%;
-    background: whitesmoke;
     z-index: 2; // #intro section's bg-right is set to z-index: 1
 
     .navbar-collapse {
@@ -59,5 +58,17 @@
         }
     }
 
-
+    //fontawesome menu icons
+    button {
+        text-align: center;
+        font-size: 24px;
+        color: getColor(dark-grayish-violet);
+        :hover {
+            color: black;
+        }
+        //toggling icons on/off
+        .fa-bars.inactive::before, .fa-times-circle.inactive::before {
+            content: "";
+        }
+    }
 }

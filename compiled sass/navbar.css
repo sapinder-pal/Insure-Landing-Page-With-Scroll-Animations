@@ -1,6 +1,5 @@
 .navbar {
   padding: 1em 10%;
-  background: whitesmoke;
   z-index: 2;
 }
 
@@ -64,5 +63,19 @@
 
 .navbar .collapsing:last-child .nav-link:hover, .navbar .show:last-child .nav-link:hover {
   border-color: getColor(dark-grayish-violet);
+}
+
+.navbar button {
+  text-align: center;
+  font-size: 24px;
+  color: getColor(dark-grayish-violet);
+}
+
+.navbar button :hover {
+  color: black;
+}
+
+.navbar button .fa-bars.inactive::before, .navbar button .fa-times-circle.inactive::before {
+  content: "";
 }
 /*# sourceMappingURL=navbar.css.map */
