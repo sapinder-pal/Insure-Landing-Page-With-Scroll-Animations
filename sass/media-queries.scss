@@ -35,8 +35,9 @@
 
 @media (max-width: 675px){
 
+	body { font-size: 0.9em; }
+
 	h1, h2 {
-		font-size: 3.5em !important;
 		text-align: center !important;
 	}
 
@@ -75,6 +76,7 @@
 	}
 	//features-section
 	#features-section {
+		margin-top: 15vh;
 		h2 {
 			padding-top: 5vh;
 			&::before {
@@ -92,7 +94,7 @@
 	//find-more
 	#find-more {
 		justify-content: center;
-		background: getColor(dark-violet) url("../images/bg-pattern-how-we-work-mobile.svg") no-repeat right;
+		background: getColor(dark-violet) url("../images/bg-pattern-how-we-work-mobile.svg") no-repeat right/contain;
 	}
 	#footer {
 		background: getColor(light-gray-bg) url("../images/bg-pattern-footer-mobile.svg") no-repeat top right/100%;
@@ -100,9 +102,9 @@
 }
 
 @media (max-width: 375px){
-	h1,h2 {
-		font-size: 2.5em;
-	}
+	
+	body { font-size: 0.85em; }
+
 	#intro-section {
 		.img-wrapper {
 			top: 0 !important;

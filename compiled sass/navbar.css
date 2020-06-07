@@ -1,6 +1,6 @@
 .navbar {
   padding: 1em 10%;
-  background: white;
+  background: whitesmoke;
   z-index: 2;
 }
 
@@ -18,7 +18,7 @@
 
 .navbar .navbar-collapse .nav-item .nav-link {
   margin: auto 0.5em;
-  font-size: 14px;
+  font-size: 0.9em;
   font-weight: bold;
   letter-spacing: 1px;
   color: getColor(dark-grayish-violet);

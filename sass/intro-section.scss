@@ -9,7 +9,7 @@
     img[class*="intro-bg"]{
         position: absolute;
     }
-    .text-wrapper, .img-wrapper {
+    .text-wrapper, .img-wrapper, h1 {
         position: relative;  
     }
 
@@ -35,7 +35,6 @@
         h1 {
             margin: 50px auto; padding-bottom: 10px;
             color: white;
-            position: relative;
             //to be animated
             &::before {
                 content: "";

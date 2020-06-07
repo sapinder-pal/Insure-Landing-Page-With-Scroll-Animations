@@ -4,8 +4,8 @@
     justify-content: space-between;
     gap: 5% 10%;
     margin: 10vh 10% 15vh;
-    padding: 0 5%;
-    background: getColor(dark-violet) url("../images/bg-pattern-how-we-work-desktop.svg") no-repeat right;
+    padding: 5%;
+    background: getColor(dark-violet) url("../images/bg-pattern-how-we-work-desktop.svg") no-repeat right/contain;
     color: white;
 
     h2 {

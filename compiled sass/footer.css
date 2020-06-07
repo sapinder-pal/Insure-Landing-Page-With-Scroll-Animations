@@ -1,6 +1,6 @@
 #footer {
   padding: 5% 10%;
-  background: getColor(light-gray-bg) url("../images/bg-pattern-footer-desktop.svg") left top no-repeat;
+  background: getColor(footer-bg), url("../images/bg-pattern-footer-desktop.svg") left top no-repeat;
 }
 
 #footer .footer-top {
@@ -31,7 +31,7 @@
 
 #footer .footer-top .social-accounts a {
   color: getColor(dark-grayish-violet);
-  font-size: 1.5em;
+  font-size: 24px;
 }
 
 #footer .footer-top .social-accounts a:hover {
@@ -80,7 +80,7 @@
 }
 
 #footer .references a {
-  font-size: 0.9em;
+  font-size: .9em;
   font-weight: bold;
   color: getColor(dark-violet);
 }

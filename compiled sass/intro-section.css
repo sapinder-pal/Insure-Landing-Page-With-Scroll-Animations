@@ -18,7 +18,7 @@
   position: absolute;
 }
 
-#intro-section .text-wrapper, #intro-section .img-wrapper {
+#intro-section .text-wrapper, #intro-section .img-wrapper, #intro-section h1 {
   position: relative;
 }
 
@@ -47,7 +47,6 @@
   margin: 50px auto;
   padding-bottom: 10px;
   color: white;
-  position: relative;
 }
 
 #intro-section .text-wrapper h1::before {

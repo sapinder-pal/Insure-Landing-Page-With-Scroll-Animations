@@ -19,35 +19,48 @@ toggler.click(()=>	{
 	}
 })
 
-//Animations
+
+
+
+//Default Animations (Non-Scroll Animations)
+
 let windowWidth = $(window).innerWidth();
 
+//desktop animations
 if(windowWidth >675){
-
-	//pseudo-bar
+	
+	//#intro h1 appear
 	$("#intro-section h1").addClass("slide-pseudo");
 	//opacity
 	$(".text-wrapper p, .text-wrapper .custom-navlink, .img-wrapper").css("opacity","1")
 	//bg pop-ups
 	$(".intro-bg-left").animate({width: "195px", height: "504"});
 	$(".intro-bg-right").css("transform","rotateZ(0) translate(0)");
-
-	//Scroll Animations
-	scrollAnimations();
 }
 
 //mobile animations
 else{
-
 	//opacity
 	$(".img-wrapper").css("opacity","1");
-	//bd pop-ups
+	//bg pop-ups
 	$(".intro-bg-left-mobile").css("height","165px");
 	$(".intro-bg-right-mobile").css("height","330px");
-
-	scrollAnimations();
 }
 
+//Scroll Animations
+
+let isScrolling = false;
+$(window).scroll((event)=> {
+	
+	//throttle "animations activation rate" down to requestAnimationFrame()
+	if(!isScrolling){
+		requestAnimationFrame(()=> {
+			scrollAnimations();
+			isScrolling = false;
+		});
+	}
+	isScrolling = true;
+})
 
 
 
@@ -56,33 +69,36 @@ else{
 
 function scrollAnimations() {
 
+	let introTextWrapper = $(".text-wrapper");
 	let featuresH2 = $("#features-section h2");
 	let featuresContainer = $(".features-container");
 	let features = $(".feature-item");
 
-	//featuresH2 pseudo
-	if(isPartiallyVisible(featuresH2[0]))
-		featuresH2.addClass("slide-pseudo");
-	else	featuresH2.removeClass("slide-pseudo");
+	//Features Container
+	if(isScrollingDownToward(featuresContainer[0])){
 
-	//featuresContainer
-	if(isPartiallyVisible(featuresContainer[0]))
-		features.addClass("slide-into-view");
-	else	features.removeClass("slide-into-view");
+		//featuresH2 slide-pseudo
+		if(isPartiallyVisible(featuresH2[0]))
+			featuresH2.addClass("slide-pseudo");
+
+		else	featuresH2.removeClass("slide-pseudo");
+
+		//features slide-into-view
+		if(isPartiallyVisible(featuresContainer[0]))
+			features.addClass("slide-into-view");
+
+		else	features.removeClass("slide-into-view");
+	}
 
 
-	// introTextWrapper pseudo (hidden on small screens)
-	if(windowWidth>675){
-		let introTextWrapper = $(".text-wrapper");
+	// introTextWrapper slide-pseudo (hidden on small screens)
+	if(windowWidth>675 && isScrollingUpToward(introTextWrapper[0])){
 		
 		if(isPartiallyVisible(introTextWrapper[0]))
 			introTextWrapper.addClass("slide-pseudo");
 		else	introTextWrapper.removeClass("slide-pseudo");
 	}
-
-	requestAnimationFrame(scrollAnimations);
 }
-
 
 
 
@@ -94,9 +110,30 @@ function isPartiallyVisible(ele){
 
 	let eleBoundary = ele.getBoundingClientRect();
 
-	var top = eleBoundary.top;
-    var bottom = eleBoundary.bottom;
-    var height = eleBoundary.height;
- 
-    return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+	let top = eleBoundary.top;
+    let bottom = eleBoundary.bottom;
+    let height = eleBoundary.height;
+
+	return ((top + height >= 0) && (height + $(window).innerHeight() >= bottom));
+}
+
+
+
+//Detect Scroll Direction
+let currentScrollPos = $(window).scrollTop();
+
+function isScrollingDownToward(ele){
+	let eleBoundary = ele.getBoundingClientRect();
+
+	let scrollingDown = (currentScrollPos < eleBoundary.bottom) ? 1 : 0;
+
+	return scrollingDown;
+}
+
+function isScrollingUpToward(ele){
+	let eleBoundary = ele.getBoundingClientRect();
+
+	let scrollingUp = (eleBoundary.top < currentScrollPos) ? 1 : 0;
+
+	return scrollingUp;
 }
