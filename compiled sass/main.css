@@ -50,6 +50,7 @@ body .custom-navlink:hover {
 .navbar {
   padding: 1em 10%;
   z-index: 2;
+  background: whitesmoke;
 }
 
 .navbar .navbar-collapse {

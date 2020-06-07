@@ -2,6 +2,7 @@
 .navbar {
     padding: 1em 10%;
     z-index: 2; // #intro section's bg-right is set to z-index: 1
+    background: whitesmoke;
 
     .navbar-collapse {
         justify-content: flex-end;
