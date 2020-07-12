@@ -24,7 +24,7 @@ body a:hover {
 }
 
 body #intro-section p, body .custom-navlink {
-  color: #ffffffe3;
+  color: rgba(255, 255, 255, 0.89);
 }
 
 body .custom-navlink,
@@ -38,7 +38,7 @@ body .custom-navlink {
   padding: 8px 2em !important;
   font-size: 0.9em;
   font-weight: bold;
-  border: 2px solid #ffffffe3;
+  border: 2px solid rgba(255, 255, 255, 0.89);
   margin-top: 25px;
 }
 
@@ -167,7 +167,7 @@ body .custom-navlink:hover {
   position: absolute;
   top: 0;
   left: 0;
-  background: #ffffffe3;
+  background: rgba(255, 255, 255, 0.89);
 }
 
 #intro-section .text-wrapper.slide-pseudo::before {
@@ -217,8 +217,10 @@ body .custom-navlink:hover {
   top: -75px;
   right: 0;
   z-index: 1;
-  -webkit-transform: rotateZ(100deg) translate(0, -600px);
-          transform: rotateZ(100deg) translate(0, -600px);
+  -webkit-transform: rotateZ(100deg);
+          transform: rotateZ(100deg);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
 }
 
 #intro-section .intro-bg-left-mobile, #intro-section .intro-bg-right-mobile {
@@ -269,10 +271,9 @@ body .custom-navlink:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #features-section .features-container .feature-item {
@@ -284,7 +285,9 @@ body .custom-navlink:hover {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   width: 250px;
-  row-gap: 20px;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
   -webkit-transform: translate(0, 200px);
           transform: translate(0, 200px);
   opacity: 0;
@@ -329,7 +332,7 @@ body .custom-navlink:hover {
 
 #footer {
   padding: 5% 10%;
-  background: linear-gradient(100deg, #fff1ad2e, #bdafff85), url("../images/bg-pattern-footer-desktop.svg") left top no-repeat;
+  background: linear-gradient(100deg, rgba(255, 241, 173, 0.18), rgba(189, 175, 255, 0.522)), url("../images/bg-pattern-footer-desktop.svg") left top no-repeat;
 }
 
 #footer .footer-top {

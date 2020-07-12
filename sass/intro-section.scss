@@ -69,7 +69,8 @@
         top: -75px;
         right: 0;
         z-index: 1; //to overlap intro-img
-        transform: rotateZ(100deg) translate(0,-600px);
+				transform: rotateZ(100deg);
+				transform-origin: 100% 100%;
     }
     
     // mobile bgs

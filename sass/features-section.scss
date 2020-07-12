@@ -24,14 +24,13 @@
     .features-container {
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
-        gap: 100px;
+        justify-content: space-between;
         
         .feature-item {
             display: flex;
             flex-flow: column nowrap;
             width: 250px;
-            row-gap: 20px;
+						align-items: space-between;
             transform: translate(0, 200px);
             opacity: 0;
 

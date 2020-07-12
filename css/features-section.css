@@ -31,10 +31,9 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #features-section .features-container .feature-item {
@@ -46,7 +45,9 @@
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   width: 250px;
-  row-gap: 20px;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
   -webkit-transform: translate(0, 200px);
           transform: translate(0, 200px);
   opacity: 0;

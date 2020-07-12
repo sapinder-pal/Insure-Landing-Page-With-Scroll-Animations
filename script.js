@@ -35,7 +35,7 @@ if(windowWidth >675){
 	$(".text-wrapper p, .text-wrapper .custom-navlink, .img-wrapper").css("opacity","1")
 	//bg pop-ups
 	$(".intro-bg-left").animate({width: "195px", height: "504"});
-	$(".intro-bg-right").css("transform","rotateZ(0) translate(0)");
+	$(".intro-bg-right").css("transform","rotateZ(0)");
 }
 
 //mobile animations

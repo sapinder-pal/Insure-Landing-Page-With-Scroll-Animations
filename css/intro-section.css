@@ -86,8 +86,10 @@
   top: -75px;
   right: 0;
   z-index: 1;
-  -webkit-transform: rotateZ(100deg) translate(0, -600px);
-          transform: rotateZ(100deg) translate(0, -600px);
+  -webkit-transform: rotateZ(100deg);
+          transform: rotateZ(100deg);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
 }
 
 #intro-section .intro-bg-left-mobile, #intro-section .intro-bg-right-mobile {
