@@ -30,12 +30,12 @@
             display: flex;
             flex-flow: column nowrap;
             width: 250px;
-						align-items: space-between;
             transform: translate(0, 200px);
             opacity: 0;
 
             img {
-                width: 86px;
+								width: 86px;
+								margin-bottom: 10px;
             }
 
             p {
