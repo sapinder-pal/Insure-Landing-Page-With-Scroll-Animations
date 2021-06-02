@@ -1,0 +1,54 @@
+body *{
+   	transition: all 0.2s ease;
+}
+
+//text-wrapper slide-in
+#intro-section h1.slide-pseudo::before {
+    transition: all 1s 1.5s ease;
+}
+
+#intro-section {
+	.text-wrapper {
+		p {
+			transition-delay: 2.5s;
+		}
+        .custom-navlink {   
+            transition: opacity 0.2s 2.7s ease;
+            &:hover {
+                transition: background-color 0.2s ease !important;
+            }
+        }
+	}
+	.img-wrapper {
+		transition-delay: 3s;
+	}
+	.intro-bg-left, .intro-bg-right,
+	.intro-bg-left-mobile, .intro-bg-right-mobile {
+		transition-property: all;
+		transition-timing-function: cubic-bezier(.68,-0.55,.27,1.55);
+	}
+	.intro-bg-left, .intro-bg-left-mobile {
+		transition-duration: .5s;
+		transition-delay: .1s;
+	}
+	.intro-bg-right, .intro-bg-right-mobile {
+		transition-duration: 0.8s;
+		transition-delay: 3.5s;
+	}
+	.intro-bg-right-mobile {
+		transition-delay: 2s;
+	}
+}
+
+//pseudo slide-bar
+#intro-section .text-wrapper.slide-pseudo::before, 		//using full references to avoid low specificity
+#features-section h2.slide-pseudo::before /*mobile-bgs*/ {
+    transition: all 1s 0.2s ease;
+}
+
+//features slide-into-view
+#features-section .features-container .slide-into-view {
+    transition: all 0.5s 0.2s cubic-bezier(.22, .61, .36, 1);
+    transform: translate(0, 0);
+    opacity: 1;
+}

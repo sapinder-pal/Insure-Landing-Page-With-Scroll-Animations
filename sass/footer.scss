@@ -1,0 +1,81 @@
+#footer {
+    padding: 5% 10%;
+    background: getColor(footer-bg), url("../images/bg-pattern-footer-desktop.svg") left top no-repeat;
+
+    .footer-top {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 3vh;
+        margin-bottom: 5vh;
+
+        //logo
+        >img {
+            height: 20px;
+        }
+
+        .social-accounts {
+            display: flex;
+            gap: 1vw;
+
+            //fontawesome icons
+            a {
+                color: getColor(dark-grayish-violet);
+                font-size: 24px;
+
+                &:hover {
+                    color: black;
+                    transform: translate(0, -10px);
+                    text-shadow: 0 10px 5px rgba(105, 105, 105, 0.281);
+                }
+            }
+        }
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        background: getColor(dark-grayish-violet);
+        margin-bottom: 5vh;
+    }
+
+    .references {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 2% 10%;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        h6 {
+            font-size: 1em;
+            margin-bottom: 2vh;
+            color: getColor(dark-grayish-violet);
+        }
+
+        a {
+            font-size: .9em;
+            font-weight: bold;
+            color: getColor(dark-violet);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .attribution {
+        display: block;
+        margin-top: 3vh;
+        font-size: 11px;
+        text-align: center;
+
+        a {
+            color: #a33e70;
+        }
+    }
+}
